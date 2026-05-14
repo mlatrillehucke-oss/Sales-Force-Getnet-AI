@@ -1,0 +1,141 @@
+{
+  "name": "Commerce",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Nombre del Comercio"
+    },
+    "type": {
+      "type": "string",
+      "title": "Tipo de Comercio",
+      "enum": [
+        "supermercado",
+        "bazar",
+        "bar",
+        "restaurante",
+        "verduler\u00eda",
+        "farmacia",
+        "ferreter\u00eda",
+        "tienda_ropa",
+        "peluquer\u00eda",
+        "panader\u00eda",
+        "carnicer\u00eda",
+        "librer\u00eda",
+        "electr\u00f3nica",
+        "\u00f3ptica",
+        "florister\u00eda",
+        "cafeter\u00eda",
+        "hotel",
+        "gimnasio",
+        "veterinaria",
+        "otro"
+      ]
+    },
+    "address": {
+      "type": "string",
+      "title": "Direcci\u00f3n"
+    },
+    "city": {
+      "type": "string",
+      "title": "Ciudad"
+    },
+    "country": {
+      "type": "string",
+      "title": "Pa\u00eds",
+      "enum": [
+        "Espa\u00f1a",
+        "Chile"
+      ]
+    },
+    "region": {
+      "type": "string",
+      "title": "Regi\u00f3n / Comunidad Aut\u00f3noma"
+    },
+    "latitude": {
+      "type": "number",
+      "title": "Latitud"
+    },
+    "longitude": {
+      "type": "number",
+      "title": "Longitud"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Tel\u00e9fono"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email"
+    },
+    "contact_person": {
+      "type": "string",
+      "title": "Persona de Contacto"
+    },
+    "has_card_terminal": {
+      "type": "boolean",
+      "title": "\u00bfYa tiene dat\u00e1fono?",
+      "default": false
+    },
+    "current_provider": {
+      "type": "string",
+      "title": "Proveedor Actual"
+    },
+    "estimated_monthly_sales": {
+      "type": "number",
+      "title": "Ventas Mensuales Estimadas (\u20ac)"
+    },
+    "status": {
+      "type": "string",
+      "title": "Estado",
+      "enum": [
+        "nuevo",
+        "contactado",
+        "interesado",
+        "en_negociaci\u00f3n",
+        "convertido",
+        "descartado"
+      ],
+      "default": "nuevo"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notas"
+    },
+    "source": {
+      "type": "string",
+      "title": "Fuente",
+      "enum": [
+        "b\u00fasqueda_ia",
+        "manual",
+        "referido",
+        "mapa"
+      ],
+      "default": "manual"
+    },
+    "assigned_executive": {
+      "type": "string",
+      "title": "Ejecutivo Asignado"
+    },
+    "priority": {
+      "type": "string",
+      "title": "Prioridad",
+      "enum": [
+        "alta",
+        "media",
+        "baja"
+      ],
+      "default": "media"
+    },
+    "last_contact_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "\u00daltimo Contacto"
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "country"
+  ]
+}

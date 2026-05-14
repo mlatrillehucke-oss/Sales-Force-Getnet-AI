@@ -1,0 +1,74 @@
+{
+  "name": "VisitRoute",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Nombre de la Ruta"
+    },
+    "description": {
+      "type": "string",
+      "title": "Descripci\u00f3n"
+    },
+    "country": {
+      "type": "string",
+      "title": "Pa\u00eds",
+      "enum": [
+        "Espa\u00f1a",
+        "Chile"
+      ]
+    },
+    "city": {
+      "type": "string",
+      "title": "Ciudad"
+    },
+    "commerce_ids": {
+      "type": "array",
+      "title": "Comercios en la Ruta",
+      "items": {
+        "type": "string"
+      }
+    },
+    "planned_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Fecha Planificada"
+    },
+    "status": {
+      "type": "string",
+      "title": "Estado",
+      "enum": [
+        "planificada",
+        "en_curso",
+        "completada",
+        "cancelada"
+      ],
+      "default": "planificada"
+    },
+    "assigned_executive": {
+      "type": "string",
+      "title": "Ejecutivo Asignado"
+    },
+    "ai_generated": {
+      "type": "boolean",
+      "title": "Generada por IA",
+      "default": false
+    },
+    "ai_notes": {
+      "type": "string",
+      "title": "Notas de IA"
+    },
+    "estimated_duration": {
+      "type": "string",
+      "title": "Duraci\u00f3n Estimada"
+    },
+    "results": {
+      "type": "string",
+      "title": "Resultados"
+    }
+  },
+  "required": [
+    "name",
+    "country"
+  ]
+}

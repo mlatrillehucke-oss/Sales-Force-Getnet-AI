@@ -1,0 +1,53 @@
+{
+  "name": "Alert",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "T\u00edtulo"
+    },
+    "description": {
+      "type": "string",
+      "title": "Descripci\u00f3n"
+    },
+    "type": {
+      "type": "string",
+      "title": "Tipo",
+      "enum": [
+        "nuevo_comercio",
+        "oportunidad",
+        "seguimiento",
+        "ia_sugerencia",
+        "sistema"
+      ],
+      "default": "sistema"
+    },
+    "priority": {
+      "type": "string",
+      "title": "Prioridad",
+      "enum": [
+        "alta",
+        "media",
+        "baja"
+      ],
+      "default": "media"
+    },
+    "commerce_id": {
+      "type": "string",
+      "title": "Comercio Relacionado"
+    },
+    "is_read": {
+      "type": "boolean",
+      "title": "Le\u00edda",
+      "default": false
+    },
+    "assigned_to": {
+      "type": "string",
+      "title": "Asignada A"
+    }
+  },
+  "required": [
+    "title",
+    "type"
+  ]
+}

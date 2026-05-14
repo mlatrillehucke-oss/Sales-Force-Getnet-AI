@@ -1,0 +1,41 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "string",
+      "title": "Mensaje"
+    },
+    "author_name": {
+      "type": "string",
+      "title": "Autor"
+    },
+    "author_email": {
+      "type": "string",
+      "title": "Email Autor"
+    },
+    "channel": {
+      "type": "string",
+      "title": "Canal",
+      "enum": [
+        "general",
+        "estrategias",
+        "dudas",
+        "logros"
+      ],
+      "default": "general"
+    },
+    "commerce_id": {
+      "type": "string",
+      "title": "Comercio Enlazado"
+    },
+    "commerce_name": {
+      "type": "string",
+      "title": "Nombre Comercio Enlazado"
+    }
+  },
+  "required": [
+    "content",
+    "channel"
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "name": "Client",
+  "type": "object",
+  "properties": {
+    "commerce_id": {
+      "type": "string",
+      "title": "ID Comercio Asociado"
+    },
+    "business_name": {
+      "type": "string",
+      "title": "Raz\u00f3n Social"
+    },
+    "trade_name": {
+      "type": "string",
+      "title": "Nombre Comercial"
+    },
+    "tax_id": {
+      "type": "string",
+      "title": "RUT / NIF / CIF"
+    },
+    "legal_representative": {
+      "type": "string",
+      "title": "Representante Legal"
+    },
+    "representative_id": {
+      "type": "string",
+      "title": "DNI / RUN Representante"
+    },
+    "address": {
+      "type": "string",
+      "title": "Direcci\u00f3n Fiscal"
+    },
+    "city": {
+      "type": "string",
+      "title": "Ciudad"
+    },
+    "country": {
+      "type": "string",
+      "title": "Pa\u00eds",
+      "enum": [
+        "Espa\u00f1a",
+        "Chile"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "title": "Tel\u00e9fono"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email"
+    },
+    "business_type": {
+      "type": "string",
+      "title": "Giro / Actividad Econ\u00f3mica"
+    },
+    "monthly_revenue": {
+      "type": "number",
+      "title": "Facturaci\u00f3n Mensual Estimada (\u20ac)"
+    },
+    "num_employees": {
+      "type": "number",
+      "title": "N\u00famero de Empleados"
+    },
+    "bank_name": {
+      "type": "string",
+      "title": "Banco"
+    },
+    "bank_account": {
+      "type": "string",
+      "title": "Cuenta Bancaria / IBAN"
+    },
+    "plan_type": {
+      "type": "string",
+      "title": "Plan GETNET",
+      "enum": [
+        "b\u00e1sico",
+        "est\u00e1ndar",
+        "premium",
+        "enterprise"
+      ],
+      "default": "est\u00e1ndar"
+    },
+    "terminal_type": {
+      "type": "string",
+      "title": "Tipo de Terminal",
+      "enum": [
+        "fijo",
+        "port\u00e1til",
+        "m\u00f3vil",
+        "virtual"
+      ],
+      "default": "port\u00e1til"
+    },
+    "services": {
+      "type": "array",
+      "title": "Servicios Contratados",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contract_status": {
+      "type": "string",
+      "title": "Estado del Contrato",
+      "enum": [
+        "pendiente",
+        "en_revisi\u00f3n",
+        "aprobado",
+        "activo",
+        "cancelado"
+      ],
+      "default": "pendiente"
+    },
+    "contract_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Fecha de Contrato"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Observaciones"
+    },
+    "data_consent": {
+      "type": "boolean",
+      "title": "Consentimiento de Datos",
+      "default": false
+    },
+    "consent_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Fecha Consentimiento"
+    }
+  },
+  "required": [
+    "business_name",
+    "tax_id",
+    "country",
+    "data_consent"
+  ]
+}
